@@ -54,6 +54,8 @@ router.post('/login',
             token,
             user: {
                 id: user.id,
+                name: user.name,
+                lastName: user.lastName,
                 email: user.email,
                 avatar: user.avatar
             }
@@ -73,6 +75,8 @@ router.get('/auth', authMiddleware,
             token,
             user: {
                 id: user.id,
+                name: user.name,
+                lastName: user.lastName,
                 email: user.email,
                 avatar: user.avatar
             }

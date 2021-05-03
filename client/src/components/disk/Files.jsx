@@ -108,8 +108,10 @@ function Files (props) {
                             type='text' 
                             placeholder='Название файла...' 
                         ></input>
-                        <img className='files__list' onClick={() => dispatch(setFileView('list'))} src={list} alt=""/>
-                        <img className='files__tile4' onClick={() => dispatch(setFileView('tile'))} src={tile} alt=""/>
+                        <div className="files__typeLook">
+                            <img className='files__list' onClick={() => dispatch(setFileView('list'))} src={list} alt=""/>
+                            <img className='files__tile4' onClick={() => dispatch(setFileView('tile'))} src={tile} alt=""/>
+                        </div>
                     </div>
                     {fileView === 'list' 
                     ? (<div className='files'>

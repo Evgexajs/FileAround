@@ -1,17 +1,12 @@
 .settings{
     margin: 10px;
+    display: flex;
+    justify-content: space-between;
     &__el{
-    display: grid;
-    grid-template-columns: 70% 30%;
-    margin-top: 15px;
+        display: flex;
+        margin-top: 15px;
     }
-    &__text {
-        grid-column: 1;
-        margin-left: 15px;
-
-    }
-    &__check {
-        grid-column: 2;
-        margin-right: 15px;
+    &__text, input {
+        margin: 15px 5px 5px 5px;
     }
 }

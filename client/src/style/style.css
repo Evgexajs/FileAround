@@ -10,6 +10,7 @@
 }
 
 button {
+  height: 100%;
   background-color: white;
   color: black;
   border: none;
@@ -31,8 +32,14 @@ body #root {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  height: 100%;
+  width: 100vw;
   background: -webkit-gradient(linear, left top, right bottom, from(#1184F9), to(#462739));
   background: linear-gradient(to bottom right, #1184F9, #462739);
+}
+
+.main__center {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +96,7 @@ body #root {
 
 .list {
   width: 600px;
-  height: 90vh;
+  max-height: 90vh;
   background: -webkit-gradient(linear, left top, right bottom, from(#1184F9), to(#3b5e86));
   background: linear-gradient(to bottom right, #1184F9, #3b5e86);
   border: solid 2px 	#000000;
@@ -101,21 +108,29 @@ body #root {
   text-align: center;
 }
 
-.list__main {
-  max-height: 60vh;
-}
-
 .list__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 800px) and (max-width: 1300px) {
+  .main__center {
+    height: auto;
+  }
+  .center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .center__menu {
+    text-align: center;
+    width: 40vw;
     position: relative;
-    width: 100%;
-    left: 0;
+    left: 30vw;
     padding: 0;
   }
   .center__change {
@@ -129,6 +144,36 @@ body #root {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .main__center {
+    height: auto;
+  }
+  .center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .center__menu {
+    text-align: center;
+    position: relative;
+    left: 30vw;
+    width: 40vw;
+    padding: 0;
+  }
+  .center__change {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .list {
+    max-height: 80vh;
   }
 }
 

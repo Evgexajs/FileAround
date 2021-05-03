@@ -20,16 +20,11 @@ function Settings (props) {
                 <div className='list__main'>
                     <div className='settings'>
                         <div className='settings__el'>
-                            <div className='settings__text'>Удалить аватар</div>
-                            <button onClick={() => dispatch(deleteAvatar())} className='settings__check'>Удалить аватар</button>
+                            <button onClick={() => dispatch(deleteAvatar())}>Удалить аватар</button>
                         </div>
                         <div className='settings__el'>
-                            <div className='settings__text'>Загрузить аватар</div>
-                            <input accept='image/*' onChange={(e) => changeHandler(e)} type='file' className='settings__check' />
-                        </div>
-                        <div className='settings__el'>
-                            <div className='settings__text'>Настройка 2</div>
-                            <div className='settings__check'>Кнопка</div>
+                            <div className='settings__text'>Выбрать аватар </div>
+                            <input accept='image/*' onChange={(e) => changeHandler(e)} type='file'/>
                         </div>
                     </div>
                 </div>

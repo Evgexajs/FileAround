@@ -1,7 +1,7 @@
 .files {
     overflow-y: scroll;
     overflow-x:hidden;
-    width: 100%;
+    width: 98%;
     max-height: 75vh;
     margin: 10px;
     &__propertys {
@@ -271,5 +271,25 @@
     }
     100% {
         transform: rotate(1800deg);
+    }
+}
+
+@media (max-width: 800px) {
+    .files{ 
+        max-height:65vh;
+    }
+}
+
+@media (max-width: 650px) {
+    .files{ 
+        max-height:60vh;
+    }
+    .files__typeLook {
+        display: flex;
+        flex-direction: column;
+    }
+    .list { 
+        width: 500px;
+        max-height:80vh;
     }
 }

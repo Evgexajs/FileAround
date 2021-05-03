@@ -11,12 +11,9 @@ function Menu (props) {
 
     return (
             <div className='center__menu'>
-                <h3>Меню</h3>
                 <div className='center__change'>
-                <NavLink to="/profile">Профиль</NavLink>
-                <NavLink to="/messages">Сообщения</NavLink>
-                <NavLink to="/main">Искать</NavLink>
-                <NavLink to="/settings">Настройки</NavLink>
+                {isAuth && <NavLink to="/profile">Профиль</NavLink>}
+                {isAuth && <NavLink to="/settings">Настройки</NavLink>}
                 {isAuth && <NavLink to="/files">Файлы</NavLink>}
                 {!isAuth && <NavLink to="/registration">Регистрация</NavLink>}
                 {!isAuth && <NavLink to="/login">Вход</NavLink>}

@@ -5,7 +5,8 @@
     h1, p {color: white; padding: 0 0 5px 0;}
 }
 
-button { 
+button {
+    height: 100%;
     background-color: white;
     color: black;
     border: none;
@@ -23,9 +24,15 @@ body #root {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    height: 100%;
+    width: 100vw;
     background: -webkit-linear-gradient(top left, #1184F9, #462739);
     background: -moz-linear-gradient(top left, #1184F9, #462739);
     background: linear-gradient(to bottom right, #1184F9, #462739);
+}
+
+.main__center {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,15 +76,11 @@ body #root {
         width: 100%;
         text-align: center;
     }
-    &__main {
-        max-height: 60vh;
-    }
     &__container {
-        display: flex;
-        
+        display: flex;        
     }
     width: 600px;
-    height: 90vh;
+    max-height: 90vh;
     background: -webkit-linear-gradient(top left, #1184F9, #3b5e86);
     background: -moz-linear-gradient(top left, #1184F9, #3b5e86);
     background: linear-gradient(to bottom right, #1184F9, #3b5e86);
@@ -85,18 +88,49 @@ body #root {
     border-radius: 20px;
 }
 
-@media (max-width: 1300px) {
-    .center__menu {
-        position:relative;
-        width: 100%;
-        left: 0;
-        padding: 0;
+@media (min-width: 800px) and (max-width: 1300px) {
+    .main__center {
+        height:auto;
     }
-    .center__change {
+    .center {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        text-align: center;
+        justify-content: center;
+        &__menu{
+            text-align: center;
+            width: 40vw;
+            position:relative;
+            left: 30vw;
+            padding: 0;
+        }
+        &__change {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .main__center {
+        height:auto;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        &__menu{
+            text-align: center;
+            position: relative;
+            left: 30vw;
+            width: 40vw;
+            padding: 0;
+        }
+        &__change {
+            display: grid;            
+            grid-template-columns: 50% 50%;
+        }
+    }
+    .list { 
+        max-height:80vh;
     }
 }
 

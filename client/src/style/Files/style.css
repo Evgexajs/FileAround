@@ -1,7 +1,7 @@
 .files {
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 100%;
+  width: 98%;
   max-height: 75vh;
   margin: 10px;
 }
@@ -426,6 +426,31 @@
   100% {
     -webkit-transform: rotate(1800deg);
             transform: rotate(1800deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .files {
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .files {
+    max-height: 60vh;
+  }
+  .files__typeLook {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list {
+    width: 500px;
+    max-height: 80vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

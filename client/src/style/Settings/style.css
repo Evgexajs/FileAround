@@ -1,24 +1,21 @@
 .settings {
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .settings__el {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 15px;
 }
 
-.settings__text {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  margin-left: 15px;
-}
-
-.settings__check {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  margin-right: 15px;
+.settings__text, .settings input {
+  margin: 15px 5px 5px 5px;
 }
 /*# sourceMappingURL=style.css.map */
