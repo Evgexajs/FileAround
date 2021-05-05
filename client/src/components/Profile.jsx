@@ -9,7 +9,6 @@ function Profile (props) {
     const isAuth = useSelector(state => state.login.isAuth)
     const user = useSelector(state => state.login.currentUser)
     const avatar = user.user?.avatar ? `${API_URL + user.user?.avatar}` : avatarLogo
-    console.log(user)
     return (
         <div className='center'>
             <div className='list'>

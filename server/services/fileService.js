@@ -3,8 +3,8 @@ const File = require('../modules/File')
 const config = require('config')
 
 class fileService {
-    createDir(file) {
-        const filePath = `${config.get('filePath')}//${file.user}//${file.path}`
+    createDir(req, file) {
+        const filePath = `${req.filePath}//${file.user}//${file.path}`
         return new Promise(((resolve, reject) => {
             try {
                     if(!fs.existsSync(filePath)) {
@@ -19,12 +19,12 @@ class fileService {
         }))
     }
 
-    deleteFile(file) {
+    deleteFile(req, file) {
         if(file.type === 'dir') {
-            const path = config.get('filePath') + '/' + file.user + '/' + file.path
+            const path = req.filePath + '/' + file.user + '/' + file.path
             fs.rmdirSync(path)
         } else {
-            const path = config.get('filePath') + '/' + file.user + '/' + file.path + '/' + file.name
+            const path = req.filePath + '/' + file.user + '/' + file.path + '/' + file.name
             fs.unlinkSync(path)
         }
     }
