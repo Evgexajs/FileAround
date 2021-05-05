@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import {Regist} from '../actions/registrationAction'
 import '../style/Register/style.css';
 
@@ -30,7 +31,7 @@ function Registration (props) {
               <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" type="password" placeholder='Введите пароль'/>
             </div>
             <div>
-                <button onClick={() => dispatch(Regist(name, lastName, email, password))}>Зарегистрироваться</button>
+              <NavLink to="/login"><button onClick={() => dispatch(Regist(name, lastName, email, password))}>Зарегистрироваться</button></NavLink>
             </div>
         </div>
     )

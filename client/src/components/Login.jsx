@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { Log } from '../actions/logAction';
 import '../style/Register/style.css';
 
@@ -20,7 +21,7 @@ function Login (props) {
               <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" type="password" placeholder='Введите пароль'/>
             </div>
             <div>
-                <button onClick={() => dispatch(Log(email, password))}>Войти</button>
+                <NavLink to="/profile"></NavLink><button onClick={() => dispatch(Log(email, password))}>Войти</button>
             </div>
         </div>
     )

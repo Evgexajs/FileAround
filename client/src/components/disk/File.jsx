@@ -33,8 +33,8 @@ function File (props) {
             <div className='file'  onClick={() => openDirHandler(props.file)}>
                 <img src={props.file.type === 'dir' ? folder : file} alt="" className='file__img'/>
                 <div className='file__name'>{props.file.name}</div>
-                <div className='file__date'>{props.file.date.slice(0, 10)}</div>
-                <div className='file__size'>{ sizeFormat(props.file.size)}</div>
+                <div className='file__date none'>{props.file.date.slice(0, 10)}</div>
+                <div className='file__size none'>{ sizeFormat(props.file.size)}</div>
                 <div className='file__button'>
                     {props.file.type !== 'dir' && <button onClick={(e) => downloadClickHandler(e)}>Скачать</button>}
                     <button onClick={(e) => deleteClickHandler(e)}>Удалить</button>

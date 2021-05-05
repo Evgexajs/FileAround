@@ -1,4 +1,4 @@
-.settings{
+.settings {
     margin: 10px;
     display: flex;
     justify-content: space-between;
@@ -8,5 +8,11 @@
     }
     &__text, input {
         margin: 15px 5px 5px 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .settings {
+        display: block;
     }
 }

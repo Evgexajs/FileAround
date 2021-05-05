@@ -17,7 +17,7 @@ function Menu (props) {
                 {isAuth && <NavLink to="/files">Файлы</NavLink>}
                 {!isAuth && <NavLink to="/registration">Регистрация</NavLink>}
                 {!isAuth && <NavLink to="/login">Вход</NavLink>}
-                {isAuth && <p onClick={() => dispatch(Logout())}>Выход</p>}
+                {isAuth && <NavLink to="/login"onClick={() => dispatch(Logout())}>Выход</NavLink>}
                 </div>
             </div>
     )

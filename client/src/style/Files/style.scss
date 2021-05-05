@@ -4,6 +4,9 @@
     width: 98%;
     max-height: 75vh;
     margin: 10px;
+    &__button {
+        height: 100%;
+    }
     &__propertys {
         display: grid;
         grid-template-columns: 20% 40% 20% 20%;
@@ -53,6 +56,10 @@
 }
 
 .files-tile {
+    overflow-y: scroll;
+    overflow-x:hidden;
+    width: 98%;
+    max-height: 75vh;
     display: grid;
     font-size: small;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -275,13 +282,13 @@
 }
 
 @media (max-width: 800px) {
-    .files{ 
+    .files, .files-tile{ 
         max-height:65vh;
     }
 }
 
 @media (max-width: 650px) {
-    .files{ 
+    .files, .files-tile{ 
         max-height:60vh;
     }
     .files__typeLook {
@@ -291,5 +298,40 @@
     .list { 
         width: 500px;
         max-height:80vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .files {
+        max-height: 55vh;
+        &__button {
+            height: 70%;
+        }
+        &__search {
+            width: auto;
+            margin: 5px;
+        }
+        &__typeLook {
+            display: flex;
+            flex-direction: row;
+        }
+        &-tile {
+            max-height: 55vh;
+            display: grid;
+            font-size: small;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 150px;
+        }
+    }
+    .none {
+        display: none;
+    }
+    .list { 
+        width: 280px;
+        max-height:80vh;
+        &__container {
+            display: grid;            
+            grid-template-columns: 33% 33% 34%;
+        }
     }
 }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { setFiles } from '../reducers/files'
 import {hideLoader, showLoader} from '../reducers/loader'
+import { ERROR } from './actionTypes'
 
 
 export function filesData(dirId, sort) {
@@ -26,13 +27,12 @@ export function filesData(dirId, sort) {
         })
         .catch(error => {
             alert(error)
-            /*localStorage.removeItem('token')
             const errors = error.message
             console.log(error)
             dispatch({
                 type: ERROR,
                 errors
-            })*/
+            })
             dispatch(hideLoader())
         })
     };

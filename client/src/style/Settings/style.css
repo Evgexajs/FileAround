@@ -18,4 +18,10 @@
 .settings__text, .settings input {
   margin: 15px 5px 5px 5px;
 }
+
+@media (max-width: 550px) {
+  .settings {
+    display: block;
+  }
+}
 /*# sourceMappingURL=style.css.map */

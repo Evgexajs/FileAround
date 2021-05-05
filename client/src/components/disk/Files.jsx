@@ -11,8 +11,7 @@ import Uploader from './Uploader.jsx';
 import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import { searchFile } from '../../actions/searchFile';
 import {showLoader} from '../../reducers/loader';
-import tile from '../../images/tile_w.png' 
-import tile9 from '../../images/tile_3x3_w.png' 
+import tile from '../../images/tile_w.png'
 import list from '../../images/list_w.png'
 
 function Files (props) {
@@ -90,8 +89,8 @@ function Files (props) {
                 <div className='list__name'><h3>Файлы</h3></div>
                 <div className='list__main'>
                     <div className="list__container">
-                        <button onClick={() => backClickHandler()}>Назад</button>
-                        <button onClick={() => showPopupHandler()}>Создать папку</button>
+                        <button className="files__button" onClick={() => backClickHandler()}>Назад</button>
+                        <button className="files__button" onClick={() => showPopupHandler()}>Создать папку</button>
                         <div className="files__upload">
                             <label htmlFor="files__upload-input" className="files__upload-label">Загрузить файл</label>
                             <input multiple={true} onChange={(e) => fileUploadHandler(e)} type='file' id="files__upload-input" className="files__upload-input" />
@@ -118,8 +117,8 @@ function Files (props) {
                         <div className="files__propertys">
                             <div className='files__property'>Тип</div>
                             <div className='files__property'>Название</div>
-                            <div className='files__property'>Дата</div>
-                            <div className='files__property'>Размер</div>
+                            <div className='files__property none'>Дата</div>
+                            <div className='files__property none'>Размер</div>
                         </div>
                         <TransitionGroup>
                             {files.map(file => 

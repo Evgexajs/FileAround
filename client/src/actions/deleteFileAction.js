@@ -12,28 +12,14 @@ export function deleteFile(file) {
                 type: DELETE_FILE,
                 payload: file._id
             })
-            console.log(response)
             alert(response.data.message)
         } catch(e) {
+            const errors = e.message
             console.log(e)
-            alert(e?.response?.data?.message)
+            dispatch({
+                type: ERROR,
+                errors
+            })
         }
     };
 };
-
-/*return async dispatch => {
-    try {
-        const response = await axios.delete(`http://localhost:5000/api/files?id=${file._id}`, {
-            headers: {Authorization:`Bearer ${localStorage.getItem('token')}`}
-        })
-        dispatch({
-            type: DELETE_FILE,
-            payload: file._id
-        })
-        console.log(response)
-        alert(response.data.message)
-    } catch(e) {
-        console.log(e)
-        alert(e?.response?.data?.message)
-    }
-};*/
